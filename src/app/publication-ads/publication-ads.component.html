@@ -1,0 +1,27 @@
+<div class="container mt-5">    
+        <div class="col-lg-2 col-md-4 col-sm-6">
+        <ag-grid-angular 
+        id="myGrid"
+        style="width: 1000px; height: 500px"
+        class="ag-theme-balham"
+        [defaultColDef]="defaultColDef"
+        [rowModelType]="rowModelType"
+        [animateRows]="true"
+        [pagination]="true"
+        [rowData]="publicationAds" 
+        [columnDefs]="columnDefs"
+        (gridReady)="onGridReady($event)">
+    </ag-grid-angular>
+    </div>
+</div>
+
+
+<!-- <div class="d-flex justify-content-center">
+    <pagination [boundaryLinks]="true" 
+                [totalItems]="pagination.totalItems"
+                [itemsPerPage]="pagination.itemsPerPage"                
+                [(ngModel)]="pagination.currentPage"
+                (pageChanged) = "pageChanged($event)"
+                previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"> 
+    </pagination>
+    </div> -->
